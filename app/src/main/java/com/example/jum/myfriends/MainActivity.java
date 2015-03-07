@@ -71,16 +71,17 @@ public class MainActivity extends ActionBarActivity {
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if(id == R.id.action_about){
+            Toast.makeText(getApplicationContext(),"This is a demonstration of using sqlite and databases in the android environment.",Toast.LENGTH_LONG).show();
+
+        }else{
+            Toast.makeText(getApplicationContext(),"Click on a friend to view their phone and email info",Toast.LENGTH_LONG).show();
         }
 
         return super.onOptionsItemSelected(item);
